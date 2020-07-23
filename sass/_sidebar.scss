@@ -1,0 +1,83 @@
+.sidebar {
+  grid-row: 1 / -1;
+  grid-column: sidebar-start / sidebar-end;
+
+  display: flex;
+  justify-content: center;
+
+  cursor: pointer;
+  background-color: $color-primary;
+
+  &:hover .nav-btn {
+    &::before {
+      transform: translateY(-1rem);
+    }
+    &::after {
+      transform: translateY(0.8rem);
+    }
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 10;
+  }
+}
+
+.nav-btn,
+.nav-btn:active {
+  position: sticky;
+  top: 0;
+
+  cursor: pointer;
+  border: none;
+  width: 4.5rem;
+  height: 0.3rem;
+  border-radius: 0.2rem;
+  transform: translateY(4rem);
+  background-color: $color-white;
+
+  &:focus {
+    outline: 0.3rem solid $color-white;
+    outline-offset: 1rem;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: 4.5rem;
+    height: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: $color-white;
+
+    backface-visibility: hidden;
+    transition: transform 0.2s ease-in;
+  }
+
+  &::before {
+    transform: translateY(-1.5rem);
+  }
+  &::after {
+    transform: translateY(1.3rem);
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    position: initial;
+    transform: translateX(-3rem) translateY(-1px);
+
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+    &::after {
+      transform: translateY(1rem);
+    }
+  }
+}

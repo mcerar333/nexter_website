@@ -1,0 +1,85 @@
+.story {
+  &__pictures {
+    grid-column: full-start / col-end 4;
+
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+
+    background: linear-gradient(
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      ),
+      url('../img/back.jpg') no-repeat right center / cover;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / -1;
+
+      padding: 6rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      padding: 8.5rem 2rem;
+    }
+  }
+
+  &__img--1 {
+    grid-row: 2 / 6;
+    grid-column: 2 / 6;
+
+    width: 100%;
+    box-shadow: 0 2rem 5rem rgba($color-black, 0.15);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 1 / -1;
+      grid-column: 1 / 5;
+    }
+  }
+
+  &__img--2 {
+    grid-row: 4 / 6;
+    grid-column: 4 / -1;
+
+    position: relative;
+    width: 115%;
+    box-shadow: 0 2rem 5rem rgba($color-black, 0.3);
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 1 / -1;
+
+      width: 100%;
+    }
+  }
+
+  &__content {
+    grid-column: col-start 5 / full-end;
+
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // justify-content: center;
+
+    display: grid;
+    align-content: center;
+    justify-items: start;
+
+    padding: 6rem 8vw;
+    background-color: $color-grey-light-1;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 5 / 6;
+      grid-column: 1 / -1;
+
+      padding: 8rem 8vw 8.5rem;
+    }
+    @media only screen and (max-width: $bp-small) {
+      padding: 8rem 8vw 8.5rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 4rem;
+  }
+}

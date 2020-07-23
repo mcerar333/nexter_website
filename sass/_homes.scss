@@ -1,0 +1,112 @@
+.homes {
+  grid-column: center-start / center-end;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 7rem;
+
+  margin: 15rem 0;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 12rem 0;
+  }
+  @media only screen and (max-width: $bp-small) {
+    margin: 10rem 0;
+  }
+}
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 3.5rem;
+
+  // position: relative;
+  background-color: $color-grey-light-1;
+  box-shadow: 0 2rem 5rem rgba($color-black, 0.2);
+
+  &__img {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+
+    width: 100%;
+    z-index: 1;
+  }
+
+  &:nth-child(odd) .home__like {
+    fill: transparent;
+    stroke-width: 0.3rem;
+    stroke: $color-primary;
+    // stroke-dasharray: 2, 2;
+    // stroke-linejoin: round;
+  }
+
+  &__like {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: end;
+
+    // position: absolute;
+    // top: 1rem;
+    // right: 1rem;
+
+    margin: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    fill: $color-primary;
+    z-index: 2;
+
+    &:hover > use {
+      fill: $color-primary;
+
+      transition: fill 0.25s;
+    }
+  }
+
+  &__name {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    align-self: end;
+    justify-self: center;
+
+    width: 80%;
+    padding: 1.25rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+    font-family: $font-display;
+    text-align: center;
+    color: $color-white;
+    background-color: $color-secondary;
+
+    transform: translateY(50%);
+    z-index: 2;
+  }
+
+  &__location,
+  &__rooms {
+    margin-top: 2.5rem;
+  }
+
+  &__location,
+  &__rooms,
+  &__area,
+  &__price {
+    justify-self: center;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 1.5rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+      fill: $color-primary;
+    }
+  }
+
+  &__btn {
+    grid-column: 1 / -1;
+  }
+}

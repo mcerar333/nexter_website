@@ -3,19 +3,10 @@
   grid-column: sidebar-start / sidebar-end;
 
   display: flex;
+  align-items: start;
   justify-content: center;
 
-  cursor: pointer;
   background-color: $color-primary;
-
-  &:hover .nav-btn {
-    &::before {
-      transform: translateY(-1rem);
-    }
-    &::after {
-      transform: translateY(0.8rem);
-    }
-  }
 
   @media only screen and (max-width: $bp-large) {
     grid-row: 1 / 2;
@@ -31,53 +22,74 @@
   }
 }
 
-.nav-btn,
-.nav-btn:active {
+.nav-btn {
   position: sticky;
   top: 0;
 
-  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 8rem;
+  height: 8rem;
   border: none;
-  width: 4.5rem;
-  height: 0.3rem;
-  border-radius: 0.2rem;
-  transform: translateY(4rem);
-  background-color: $color-white;
+  outline: none;
+  cursor: pointer;
+  background-color: $color-primary;
+
+  &:hover .nav-btn__span,
+  &:active .nav-btn__span {
+    &::before {
+      transform: translateY(-1rem);
+    }
+    &::after {
+      transform: translateY(0.8rem);
+    }
+  }
 
   &:focus {
-    outline: 0.3rem solid $color-white;
-    outline-offset: 1rem;
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    display: block;
-    width: 4.5rem;
-    height: 0.3rem;
-    border-radius: 0.2rem;
-    background-color: $color-white;
-
-    backface-visibility: hidden;
-    transition: transform 0.2s ease-in;
-  }
-
-  &::before {
-    transform: translateY(-1.5rem);
-  }
-  &::after {
-    transform: translateY(1.3rem);
+    border: 0.3rem solid $color-white;
   }
 
   @media only screen and (max-width: $bp-large) {
-    position: initial;
-    transform: translateX(-3rem) translateY(-1px);
+    width: 6rem;
+    height: 6rem;
+    margin-right: 0.9rem;
+  }
+
+  &__span {
+    width: 4.5rem;
+    height: 0.3rem;
+
+    border-radius: 0.2rem;
+    background-color: $color-white;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 4.5rem;
+      height: 0.3rem;
+      border-radius: 0.2rem;
+      background-color: $color-white;
+
+      transition: transform 0.2s ease-in;
+    }
 
     &::before {
-      transform: translateY(-1.2rem);
+      transform: translateY(-1.5rem);
     }
     &::after {
-      transform: translateY(1rem);
+      transform: translateY(1.3rem);
+    }
+
+    @media only screen and (max-width: $bp-large) {
+      &::before {
+        transform: translateY(-1.2rem);
+      }
+      &::after {
+        transform: translateY(1rem);
+      }
     }
   }
 }

@@ -21,6 +21,9 @@
   grid-template-columns: min-content 1fr;
   gap: 1.5rem 2.5rem;
 
+  cursor: help;
+  transition: opacity 0.3s ease;
+
   &__icon {
     grid-row: 1 / span 2;
 

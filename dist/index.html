@@ -13,11 +13,15 @@
     <link rel="stylesheet" href="css/main.min.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
+    <script defer src="js/script.js"></script>
+
     <title>nexter | your home, your freedom</title>
   </head>
   <body class="container">
     <div class="sidebar">
-      <button class="nav-btn"></button>
+      <button class="nav-btn">
+        <span class="nav-btn__span"></span>
+      </button>
     </div>
 
     <header class="header">
@@ -55,7 +59,7 @@
       </div>
     </div>
 
-    <section class="features">
+    <section class="features section">
       <div class="feature">
         <svg class="feature__icon">
           <use xlink:href="img/sprite.svg#icon-global"></use>
@@ -123,20 +127,24 @@
       </div>
     </section>
 
-    <div class="story__pictures">
+    <div class="story__pictures section">
       <img
-        src="img/story-1.jpeg"
+        src="img/story-1-lazy.jpeg"
+        data-src="img/story-1.jpeg"
+        loading="lazy"
         alt="young couple with their new house"
-        class="story__img--1"
+        class="story__img--1 lazy-img"
       />
       <img
-        src="img/story-2.jpeg"
+        src="img/story-2-lazy.jpeg"
+        data-src="img/story-2.jpeg"
+        loading="lazy"
         alt="luxurious new house"
-        class="story__img--2"
+        class="story__img--2 lazy-img"
       />
     </div>
 
-    <div class="story__content">
+    <div class="story__content section">
       <h3 class="heading-3 mb-sm">Happy Customers</h3>
       <h2 class="heading-2 heading-2--dark mb-md">
         &ldquo;The best decision of our lives&rdquo;
@@ -146,12 +154,18 @@
         distinctio necessitatibus pariatur voluptatibus. Quidem consequatur
         harum volupta!
       </p>
-      <button class="btn">Find your own home</button>
+      <button class="btn story__btn">Find your own home</button>
     </div>
 
-    <section class="homes">
+    <section class="homes section">
       <div class="home">
-        <img src="img/house-1.jpeg" alt="house 1" class="home__img" />
+        <img
+          src="img/house-1-lazy.jpeg"
+          data-src="img/house-1.jpeg"
+          loading="lazy"
+          alt="house 1"
+          class="home__img lazy-img"
+        />
         <svg class="home__like">
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
@@ -184,7 +198,13 @@
       </div>
 
       <div class="home">
-        <img src="img/house-2.jpeg" alt="house 2" class="home__img" />
+        <img
+          src="img/house-2-lazy.jpeg"
+          data-src="img/house-2.jpeg"
+          loading="lazy"
+          alt="house 2"
+          class="home__img lazy-img"
+        />
         <svg class="home__like">
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
@@ -217,7 +237,13 @@
       </div>
 
       <div class="home">
-        <img src="img/house-3.jpeg" alt="house 3" class="home__img" />
+        <img
+          src="img/house-3-lazy.jpeg"
+          data-src="img/house-3.jpeg"
+          loading="lazy"
+          alt="house 3"
+          class="home__img lazy-img"
+        />
         <svg class="home__like">
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
@@ -250,7 +276,13 @@
       </div>
 
       <div class="home">
-        <img src="img/house-4.jpeg" alt="house 4" class="home__img" />
+        <img
+          src="img/house-4-lazy.jpeg"
+          data-src="img/house-4.jpeg"
+          loading="lazy"
+          alt="house 4"
+          class="home__img lazy-img"
+        />
         <svg class="home__like">
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
@@ -283,7 +315,13 @@
       </div>
 
       <div class="home">
-        <img src="img/house-5.jpeg" alt="house 5" class="home__img" />
+        <img
+          src="img/house-5-lazy.jpeg"
+          data-src="img/house-5.jpeg"
+          loading="lazy"
+          alt="house 5"
+          class="home__img lazy-img"
+        />
         <svg class="home__like">
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
@@ -316,7 +354,13 @@
       </div>
 
       <div class="home">
-        <img src="img/house-6.jpeg" alt="house 6" class="home__img" />
+        <img
+          src="img/house-6-lazy.jpeg"
+          data-src="img/house-6.jpeg"
+          loading="lazy"
+          alt="house 6"
+          class="home__img lazy-img"
+        />
         <svg class="home__like">
           <use xlink:href="img/sprite.svg#icon-heart-full"></use>
         </svg>
@@ -349,103 +393,131 @@
       </div>
     </section>
 
-    <section class="gallery">
+    <section class="gallery section">
       <figure class="gallery__item gallery__item--1">
         <img
-          src="img/gal-1.jpeg"
+          src="img/gal-1-lazy.jpeg"
+          data-src="img/gal-1.jpeg"
+          loading="lazy"
           alt="gallery image number 1"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--2">
         <img
-          src="img/gal-2.jpeg"
+          src="img/gal-2-lazy.jpeg"
+          data-src="img/gal-2.jpeg"
+          loading="lazy"
           alt="gallery image number 2"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--3">
         <img
-          src="img/gal-3.jpeg"
+          src="img/gal-3-lazy.jpeg"
+          data-src="img/gal-3.jpeg"
+          loading="lazy"
           alt="gallery image number 3"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--4">
         <img
-          src="img/gal-4.jpeg"
+          src="img/gal-4-lazy.jpeg"
+          data-src="img/gal-4.jpeg"
+          loading="lazy"
           alt="gallery image number 4"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--5">
         <img
-          src="img/gal-5.jpeg"
+          src="img/gal-5-lazy.jpeg"
+          data-src="img/gal-5.jpeg"
+          loading="lazy"
           alt="gallery image number 5"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--6">
         <img
-          src="img/gal-6.jpeg"
+          src="img/gal-6-lazy.jpeg"
+          data-src="img/gal-6.jpeg"
+          loading="lazy"
           alt="gallery image number 6"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--7">
         <img
-          src="img/gal-7.jpeg"
+          src="img/gal-7-lazy.jpeg"
+          data-src="img/gal-7.jpeg"
+          loading="lazy"
           alt="gallery image number 7"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--8">
         <img
-          src="img/gal-8.jpeg"
+          src="img/gal-8-lazy.jpeg"
+          data-src="img/gal-8.jpeg"
+          loading="lazy"
           alt="gallery image number 8"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--9">
         <img
-          src="img/gal-9.jpeg"
+          src="img/gal-9-lazy.jpeg"
+          data-src="img/gal-9.jpeg"
+          loading="lazy"
           alt="gallery image number 9"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--10">
         <img
-          src="img/gal-10.jpeg"
+          src="img/gal-10-lazy.jpeg"
+          data-src="img/gal-10.jpeg"
+          loading="lazy"
           alt="gallery image number 10"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--11">
         <img
-          src="img/gal-11.jpeg"
+          src="img/gal-11-lazy.jpeg"
+          data-src="img/gal-11.jpeg"
+          loading="lazy"
           alt="gallery image number 11"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--12">
         <img
-          src="img/gal-12.jpeg"
+          src="img/gal-12-lazy.jpeg"
+          data-src="img/gal-12.jpeg"
+          loading="lazy"
           alt="gallery image number 12"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--13">
         <img
-          src="img/gal-13.jpeg"
+          src="img/gal-13-lazy.jpeg"
+          data-src="img/gal-13.jpeg"
+          loading="lazy"
           alt="gallery image number 13"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
       <figure class="gallery__item gallery__item--14">
         <img
-          src="img/gal-14.jpeg"
+          src="img/gal-14-lazy.jpeg"
+          data-src="img/gal-14.jpeg"
+          loading="lazy"
           alt="gallery image number 14"
-          class="gallery__img"
+          class="gallery__img lazy-img"
         />
       </figure>
     </section>
@@ -473,9 +545,7 @@
       </ul>
       <p class="copyright">nexter &nbsp;&copy; 2020</p>
       <p class="copyright">Design by Jonas Schmedtmann</p>
-      <p class="copyright">
-        Developed with <span>❤</span> by <a href="#">RoxyDEV.io</a>
-      </p>
+      <p class="copyright">Developed with <span>❤</span> by Tony G</p>
     </footer>
   </body>
 </html>

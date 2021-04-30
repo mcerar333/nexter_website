@@ -5,13 +5,13 @@
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 7rem;
 
-  margin: 15rem 0;
+  padding: 15rem 0;
 
   @media only screen and (max-width: $bp-medium) {
-    margin: 12rem 0;
+    padding: 12rem 0;
   }
   @media only screen and (max-width: $bp-small) {
-    margin: 10rem 0;
+    padding: 10rem 0;
   }
 }
 

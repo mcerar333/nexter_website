@@ -10,11 +10,8 @@
   grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
   gap: 2rem;
 
-  // display: flex;
-  align-items: center;
-  // justify-content: space-between;
-
   list-style: none;
+  align-items: center;
 
   &__link:link,
   &__link:visited {
@@ -43,8 +40,8 @@
 }
 
 .copyright {
-  margin-top: 8rem;
   line-height: 1;
+  margin-top: 8rem;
   font-size: 1.4rem;
   text-align: center;
   color: $color-grey-light-2;
@@ -71,8 +68,6 @@
     &:active {
       color: $color-primary;
       transform: rotate(2deg) scale(1.1);
-      text-shadow: 0 0.1rem 2rem $color-primary;
-      box-shadow: 0 0.1rem 2.5rem rgba($color-primary, 0.1);
     }
 
     &:focus {

@@ -56,7 +56,10 @@ const lazyLoad = (entries, observer) => {
 
 const imgObserver = new IntersectionObserver(lazyLoad);
 
-images.forEach(img => imgObserver.observe(img));
+images.forEach(img => {
+  imgObserver.observe(img);
+  img.classList.add('lazy-img');
+});
 
 ///////////////////////////////////////
 // FEATURES SECTION - Hover Effects

@@ -11,7 +11,7 @@
         rgba($color-primary, 0.5),
         rgba($color-primary, 0.5)
       ),
-      url('../img/back.jpg') no-repeat right center / cover;
+      url('../img/back.jpeg') no-repeat right center / cover;
 
     @media only screen and (max-width: $bp-medium) {
       grid-column: 1 / -1;

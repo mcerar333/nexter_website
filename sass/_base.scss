@@ -72,13 +72,17 @@ body {
 
 .section {
   transition: transform 1.5s, opacity 1.5s;
-}
 
-.section--hidden {
-  transform: translateY(5rem);
-  opacity: 0;
+  &--hidden {
+    transform: translateY(8rem);
+    opacity: 0;
+
+    @media only screen and (max-width: $bp-medium) {
+      transform: translateY(6rem);
+    }
+  }
 }
 
 .lazy-img {
-  filter: blur(10px);
+  filter: blur(5px);
 }
